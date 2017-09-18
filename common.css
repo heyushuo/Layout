@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);/*防止移动端点击时出现黑色黑背*/
+}
+/*-webkit-overflow-scrolling:touch;是的滑动更加流畅*/
+a{
+	text-decoration:none;/*防止有下划线*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    background-color: transparent;/*只是背景透明，不会被子元素继承*/
+}
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	-webkit-appearance: none; /*就可以去除浏览器默认样式.button在安卓和ios端展现样式不一样*/
+	outline:none; /*去除点击按钮会有边框*/
+}
+
+ul{
+	list-style: none;
+}
+.ul-float li{
+	float: left;
+}
+
+.clearfix:after{
+    content:'';
+    display:block;
+    clear:both;
+    height:0;
+    visibility:hidden;
+}
+.clearfix{ *zoom:1;/*IE/7/6*/ }
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
