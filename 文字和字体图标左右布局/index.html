@@ -21,10 +21,41 @@
 				font-size: 16px;
 				vertical-align: middle;
 			}
+			
+			
+			
+			
+			
+			
+			p{
+				font-size: 16px;
+			}
+			/*
+			 * 1.如果背景图片是20*20,字体为16px合适
+			 * 2.
+			 */
+			.icon { 
+				/*16-20px之间*/
+			    display: inline-block; 
+			    width:20px; height:20px; 
+			    background: url(delete.png) no-repeat center; 
+			    white-space:nowrap; 
+			    letter-spacing: -1em; 
+			    text-indent: -99em; 
+			    color: transparent;
+			    padding: 0 10px;
+			    /* IE7 */
+			    *text-indent: 0;
+			    *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\3000');
+			}
+			.icon:before { 
+			    content: '\3000'; 
+			}
 		</style>
 	</head>
 	<body>
 		<div class="box">
+			<!--字体图标版-->
 			<ul>
 				<li>
 					<i class="iconfont icon-home_light"></i>
@@ -43,6 +74,13 @@
 					<span>我的</span>
 				</li>
 			</ul>
+			<!--字体图标版结束-->
+			<hr />
+			<br />
+			<!--背景图片版-->
+			<p>
+				<i class="icon"></i>删除
+			</p>
 		</div>
 	</body>
 </html>
