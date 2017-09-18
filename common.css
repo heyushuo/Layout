@@ -9,6 +9,7 @@ a{
 	text-decoration:none;/*防止有下划线*/
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     background-color: transparent;/*只是背景透明，不会被子元素继承*/
+    /*text-decoration: underline; /*滑过底部没有样式*/*/
 }
 button,
 input[type=button],

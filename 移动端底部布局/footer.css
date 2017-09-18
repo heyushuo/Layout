@@ -1,0 +1,23 @@
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	border-top: 1px solid #5D656B;
+	padding: 5px 0;
+}
+.footer ul li{
+	width: 25%;
+}
+.footer ul li a{
+	color: #5D656B;
+	display: block;
+	text-align: center;
+	font-size: 12px;
+}
+.footer span{
+	display: block;
+	width: 100%;
+	font-size: 18px;
+}
