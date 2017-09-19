@@ -7,20 +7,21 @@
 		<style type="text/css">
 			.box{
 				width: 860px;
+				height: 200px;
 				margin: 100px auto;
 				border: 1px solid black;
+				text-align:justify;
 			}
-			.content{
-				width: 880px;
-				height: 400px;
-				/*border: 1px solid red;*/
-				margin-left: -20px;
+			ul{
+				/*width: 100%;
+				height: 100%;*/
+				text-align:justify;
+				/*font-size: 0;*/
 			}
 			ul li{
 				width: 200px;
 				height: 200px;	
-				margin-left: 20px;
-				background: red;
+				display: inline-block;
 			}
 			ul li:nth-child(1){
 				background: red;
@@ -37,21 +38,8 @@
 		</style>
 	</head>
 	<body>
-		<!--固定宽度实现两端对齐-->
 		<div class="box">
-			<ul class="ul-float clearfix content">
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
+			<ul class="content">
 				<li>
 					
 				</li>
@@ -66,5 +54,4 @@
 				</li>
 			</ul>
 		</div>
-	</body>
 </html>
