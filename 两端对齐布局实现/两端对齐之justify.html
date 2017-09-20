@@ -5,53 +5,59 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../common.css"/>
 		<style type="text/css">
-			.box{
-				width: 860px;
-				height: 200px;
-				margin: 100px auto;
-				border: 1px solid black;
-				text-align:justify;
-			}
-			ul{
-				/*width: 100%;
-				height: 100%;*/
-				text-align:justify;
-				/*font-size: 0;*/
-			}
-			ul li{
-				width: 200px;
-				height: 200px;	
-				display: inline-block;
-			}
-			ul li:nth-child(1){
-				background: red;
-			}
-			ul li:nth-child(2){
-				background: blanchedalmond;
-			}
-			ul li:nth-child(3){
-				background: green;
-			}
-			ul li:nth-child(4){
-				background: yellow;
-			}
+			*{margin:0;padding:0;}
+/* 
+ 说明：
+ 1.IE中要实现块内单行两端对齐需要使用其私有属性text-align-last:justify配合，text-align-last 要生效，必须先定义text-align 为justify
+ 2.line-height:0 解决标准浏览器容器底部多余的空白
+*/
+.demo{
+     text-align:justify;
+     text-align-last:justify;
+     height:44px;
+     width: 400px;
+     border: 1px solid #000000;
+     font-size:0;
+}
+/*
+ 说明：
+ 模块使用[换行符]或[空格符]后，webkit浏览器中会引起最后一个模块有多余空白，使用font-size:0可清除该空格
+*/
+@media all and (-webkit-min-device-pixel-ratio:0){
+.demo{
+     font-size:0;
+}
+}
+ /* 
+ 说明：
+ 1.text-align-last:justify 目前只有IE支持，标准浏览器需要使用 .demo:after 伪类模拟类似效果 
+ 2.opera浏览器需要添加 vertical-align:top 才能完全解决底部多余的空白
+ */
+.demo:after{
+     display:inline-block;
+     overflow:hidden;
+     width:100%;
+     height:0;
+     content:'';
+     vertical-align:top;
+}
+.demo a{
+     width:20%;
+     display:inline-block;
+     height:44px;
+     line-height:44px;
+     font-size: 16px;
+     border: 1px solid black;
+     color:#666;
+}
 		</style>
 	</head>
 	<body>
-		<div class="box">
-			<ul class="content">
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
-			</ul>
+		<div class="demo">
+		    <a class="link" href="#none">10元</a>
+		    <a class="link" href="#none">20元</a>
+		    <a class="link" href="#none">30元</a>
+		    <a class="link" href="#none">50元</a>
 		</div>
+	</body>
 </html>
