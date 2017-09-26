@@ -2,8 +2,116 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=7">  
+		#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  
+		<meta http-equiv="X-UA-Compatible" content="IE=8">  
+		#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+		#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  
+		<meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">  
+		<meta http-equiv="X-UA-Compatible" content="IE=7,9">  -->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<!--#以上代码IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame.-->
+		<link rel="stylesheet" type="text/css" href="../common.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont/unicode.css"/>
 		<title></title>
+		<style type="text/css">
+			/*http://blog.sina.com.cn/s/blog_66701e7601015pcc.html*/
+			/*要想兼容ie浏览器,必须positin:relative;下的所有元素都要设置left.top的值*/
+			input{
+				height: 30px;
+				width: 300px;
+				border: 1px solid black;
+				padding: 0;
+			}
+			.box2,.box3{
+				position: relative;
+				margin-top: 30px;
+				width: 300px;
+				height: 30px;
+			}
+			.box2 div{
+				position: absolute;
+				top: 1px;
+				left: 0px;
+				/*_top:0px;*/
+				/*display: inline-block;*/
+				height: 30px;
+				line-height: 30px;
+				width: 30px;
+				text-align: center;
+				border-right: 1px solid black;
+			}
+			.box2 input{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				padding-left: 34px;
+			}
+			
+			
+			/*box3*/
+			.box3{
+				position: relative;
+				margin-top: 30px;
+			}
+			.box3 i{
+				position: absolute;
+				right: 0;
+				top: 0px;
+				display: block;
+				height: 32px;
+				line-height: 32px;
+				width: 32px;
+				text-align: center;
+				/*background: rgba(0,0,0,0.5);*/
+			}
+			.box3 input{
+				padding-right: 34px;
+			}
+		</style>
 	</head>
 	<body>
+		<!--<div class="box1">
+			<input type="text" class="iconfont" placeholder="&#xe668;  heyushuo" value="" />
+		</div>-->
+		<i class="icon iconfont">&#xe668;</i>
+		<i class="icon iconfont">&#xe668;</i>
+		<i class="icon iconfont">&#xe668;</i>
+		<i class="icon iconfont">&#xe668;</i>
+		<i class="icon iconfont">&#xe668;</i>
+		<i class="icon iconfont">&#xe669;</i>
+		<div class="box2">
+			<input type="text" class="con" />
+			<div class="icon iconfont">&#xe668;</div>
+		</div>
+		
+		<div class="box3">
+			<input type="text" class="con" placeholder="请输入姓名" />
+			<i class="iconfont icon-shop"></i>
+		</div>
 	</body>
 </html>
+<!--<script src="../jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var $ = jQuery.noConflict(); 
+        // val()无参数是取值，有参数是设置  
+        // 为了更好的兼容性，将下面的val()设置与input中的placeholder的值设置相同  
+        $("input.text1").val("请输入姓名");  
+        textFill($('input.text1'));  
+  
+    function textFill(input) {  
+        var originalvalue = input.val();  
+        input.focus(function() {  
+            if ($.trim(input.val()) == originalvalue) {  
+                input.val('');  
+            }  
+        });  
+        input.blur(function() {  
+            if ($.trim(input.val()) == '') {  
+                input.val(originalvalue);  
+            }  
+        });  
+    }  
+</script>-->

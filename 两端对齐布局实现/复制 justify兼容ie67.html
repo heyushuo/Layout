@@ -28,6 +28,22 @@
 				height: 0;
 				overflow: hidden;
 			}
+			
+			
+			/*如果本身是内联元素的，把它的display属性设置设置为inline-block时，所有浏览器都是支持的。
+			相反，如果本身是块级元素的，把它设为display：inline-block;  那么ie6/ie7都是不支持的。*/
+			
+			
+			
+			/*块级元素变成行内块并且兼容ie6和ie7*/
+			
+			/*如果是block水平的元素，例如li标签。则需要多点代码，目前我知道的方法有两个，如下所示：
+
+			li {display:inline-block;...}
+			li {display:inline;}
+			或者是：
+			
+			li{display:inline; zoom:1;...}*/
 		</style>
 	</head>
 	<body>
