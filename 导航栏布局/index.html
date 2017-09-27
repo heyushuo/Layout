@@ -5,29 +5,40 @@
 		<title>导航栏布局</title>
 		<link rel="stylesheet" type="text/css" href="../common.css"/>
 		<style type="text/css">
+			/*导航最好固定高度*/
 			.nav{
 				font-size: 16px;
 			}
 			.nav li{
 				position: relative;
+				/*width: 120px;*/
+				margin-left: 2px;
+				height: 40px;
+				display: block;
 			}
 			.nav li a{
 				width: 120px;
-				padding: 6px 0;
+				height: 40px;
+				line-height: 40px;
 				display: block;
 				text-align: center;
-				margin-left: 2px;
 				border: 1px solid black;
+				/*position: absolute;
+				left:0px;
+				top:0px;*/
 			}
 			.nav li .content{
 				display: none;
 				/*width: 300px;*/
 				position: absolute;
-				top: 35px;
+				top: 42px;
 				left: 0;
 			}
 			.nav li .content h1{
 				padding: 0 20px;
+			}
+			.nav li .content h1{
+				background:yellow;
 			}
 			.nav li a:hover{
 				background: #bbb;
