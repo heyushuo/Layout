@@ -17,6 +17,7 @@ a{
 button,
 input[type=button],
 input[type=reset],
+input[type=text],
 input[type=submit] {
 	-webkit-appearance: none; /*就可以去除浏览器默认样式.button在安卓和ios端展现样式不一样*/
 	outline:none; /*去除点击按钮会有边框*/
