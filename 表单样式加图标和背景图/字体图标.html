@@ -22,12 +22,12 @@
 			input{
 				height: 30px;
 				width: 300px;
+				line-height: 30px;
 				border: 1px solid black;
 				padding: 0;
 			}
-			.box2,.box3{
+			.box2{
 				position: relative;
-				margin-top: 30px;
 				width: 300px;
 				height: 30px;
 			}
@@ -48,64 +48,33 @@
 				top: 0px;
 				padding-left: 34px;
 			}
-			
-			
-			/*box3*/
-			.box3{
-				position: relative;
-				margin-top: 30px;
-			}
-			.box3 i{
+			.box2 span{
 				position: absolute;
-				right: 0;
-				top: 0px;
 				display: inline-block;
-				height: 32px;
-				line-height: 32px;
-				width: 32px;
-				text-align: center;
-				/*background: rgba(0,0,0,0.5);*/
-			}
-			.box3 input{
-				padding-right: 34px;
+				height: 30px;
+				line-height: 30px;
+				left: 35px;
+				top: 1px;
+				color: #999;
+				font-size: 14px;
 			}
 		</style>
 	</head>
 	<body>
-		<!--<div class="box1">
-			<input type="text" class="iconfont" placeholder="&#xe668;  heyushuo" value="" />
-		</div>-->
-	
-		<div class="box2">
-			<input type="text" class="con" />
-			<i class="icon iconfont">&#xe668;</i>
-		</div>
-		
-		<div class="box3">
-			<input type="text" class="con" placeholder="请输入姓名" />
-			<i class="iconfont icon-shop"></i>
+		<div class="box clearfix">
+			<label for="heyushuo" style="line-height: 30px;padding: 0 5px;" class="pull-left">何玉硕</label>
+			<div class="box2 pull-left">
+				<input type="text" name="name" id="heyushuo" class="con" />
+				<i class="icon iconfont">&#xe668;</i>
+				<span>请输入账号</span>
+			</div>
 		</div>
 	</body>
 </html>
-<!--<script src="../jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	var $ = jQuery.noConflict(); 
-        // val()无参数是取值，有参数是设置  
-        // 为了更好的兼容性，将下面的val()设置与input中的placeholder的值设置相同  
-        $("input.text1").val("请输入姓名");  
-        textFill($('input.text1'));  
-  
-    function textFill(input) {  
-        var originalvalue = input.val();  
-        input.focus(function() {  
-            if ($.trim(input.val()) == originalvalue) {  
-                input.val('');  
-            }  
-        });  
-        input.blur(function() {  
-            if ($.trim(input.val()) == '') {  
-                input.val(originalvalue);  
-            }  
-        });  
-    }  
-</script>-->
+	var oL=document.getElementsByTagName("span")[0];
+	var oU=document.getElementsByTagName("input")[0];
+	oL.onclick=function(){
+		oU.focus();
+	}
+</script>
