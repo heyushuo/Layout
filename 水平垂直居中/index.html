@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.pull-left{float: left;}
+			.box{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				border: 1px solid black;
+			}
+			/*兼容性：,IE7及之前版本不支持*/
+			.box1{
+				width: 100px;
+	            height: 100px;
+	            background: green;
+	            position:absolute;
+	            left:0;
+	            top: 0;
+	            bottom: 0;
+	            right: 0;
+	            margin: auto;
+			}
+			.box2{
+	            width:50px;
+	            height: 50px;
+	            background:green;
+	            position: absolute;
+	            left:50%;
+	            top:50%;
+	            margin-left: -25px;
+	            margin-top: -25px;
+			}
+			/*//兼容性：IE8不支持；*/
+			.box3{
+				 width: 100px;
+	            height: 100px;
+	            background: green;
+	            position:absolute;
+	            left:50%;    /* 定位父级的50% */
+	            top:50%;
+	            transform: translate(-50%,-50%); /*自己的50% */
+			}
+			
+			/*不定宽高水平垂直居中*/
+			
+			.flexbox{
+				width: 200px;
+	             height:200px;
+	             border: 1px solid black;
+	             display:flex;
+	             justify-content:center;
+	             align-items:center;
+	               /* aa只要三句话就可以实现不定宽高水平垂直居中。 */
+	        }
+	        .box4{
+	            background: green;
+	           /* width: 100px;
+	            height: 100px;*/
+	        }
+	        .tablebox{
+	        	height: 200px;
+	        	width: 200px;
+	        	border: 1px solid black;
+	        	display: table-cell;
+	        	text-align: center;
+	        	vertical-align: middle;
+	        }
+	        .box5{
+	        	vertical-align:middle;
+				display:inline-block;
+	        }
+		</style>
+	</head>
+	<body>
+		<div class="pull-left">
+			<div class="box">
+				<div class="box1">
+					
+				</div>
+			</div>
+			<div class="box">
+				<div class="box2">
+					
+				</div>
+			</div>
+			<div class="box">
+				<div class="box3">
+					
+				</div>
+			</div>
+		</div>
+		<div class="pull-left">
+			<div class="flexbox">
+				<div class="box4">
+					1
+				</div>
+			</div>
+			<div class="tablebox">
+				<div class="box5">
+					2
+				</div>
+			</div>
+			<div class="box">
+				<div class="box6">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
