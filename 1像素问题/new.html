@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			.first-div{
+				position: relative;
+				padding: 20px 0;
+				width: 80%;
+				margin: 0 auto;
+			}
+			.first-div:before{
+			  /*content: "";
+			  position: absolute;
+			  top: -50%;
+			  bottom: -50%;
+			  left: -50%;
+			  right: -50%;
+			  width: 200%;
+			  height: 200%;
+			  -webkit-transform: scale(0.5);
+			  transform: scale(0.5);
+			  border: solid 1px red;
+			  box-sizing:border-box;*/
+			 width: 200%;
+        	height: 200%;
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	z-index: 0;
+        	content: "";
+        	-webkit-transform: scale(0.5);
+        	-webkit-transform-origin: 0 0;
+        	transform: scale(0.5);
+        	transform-origin: 0 0;
+        	border: solid 1px red;
+        	
+			}
+		</style>
+	</head>
+	<body>
+	  <div class="first-div">
+	    HELLO WORLD
+	  </div>
+	</body>
+</html>
+
